@@ -1,0 +1,207 @@
+	html, body {
+		position: relative;
+		width: 100vw;
+		height: 100vh;
+		overflow: hidden;
+		background: rgb(2,0,36);
+		/* background: linear-gradient(94deg, rgba(2,0,36,1) 0%, rgba(10,0,107,1) 33%, rgba(0,113,255,1) 100%);	 */
+		background: radial-gradient(94deg, #46778F 0%, rgb(20, 20, 20) 33%, rgb(0, 0, 0) 100%);	
+	}
+	html, body, input, button {
+		font-family: "Sen", sans-serif;
+	}
+	h1{
+		text-align: center;
+		font-size: 2.5rem;
+		color: #e1ebf5;
+		padding-top: 2rem;
+		padding-bottom: 3rem ;
+	}
+	main{
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	button {
+		border: 0;
+		outline: none;
+	}
+  
+  	.chat-box {
+	  width: 350px;
+	  margin-bottom: 2rem;
+	}
+    .chat-box .header {
+		display: flex;
+	align-items: center;
+	background-color: #46778f;
+	border-radius: 20px 20px 0 0;
+	padding: 15px;
+	}
+    img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: 50% 50%;
+	border-radius: 50%;
+	}
+	.chat-box .header .avatar-big {
+		width: 35px;
+		height: 35px;
+	}
+	.chat-box .header .name {
+		color: #fff;
+		margin-left: 20px;
+		font-size: 20px;
+		font-weight: 500;
+	}
+	.chat-box .header .options {
+		font-size: 20px;
+		color: lightgrey;
+		margin-left: auto;
+		cursor: pointer;
+	}
+	.chat-box .chat-room {
+		position: relative;
+		height: 400px;
+		background-color: #e1ebf5;
+		padding: 15px;
+		overflow-y: scroll;
+	}
+	.chat-box .chat-room .avatar-small {
+		width: 25px;
+		height: 25px;
+	}
+	.chat-box .chat-room .message {
+		margin-bottom: 15px;
+		display: flex;
+		flex-direction: column;
+	}
+	.chat-box .chat-room .message-right {
+		align-items: flex-end;
+		justify-content: end;
+	}
+	.chat-box .chat-room .message-right .bubble {
+		border-radius: 0 5px 5px 5px;
+		background-color: #6dbbe0;
+		color: #fff;
+		cursor: pointer;
+	}
+	.chat-box .chat-room .message-left {
+		align-items: flex-start;
+		justify-content: end;
+	}
+	.chat-box .chat-room .message-left .bubble {
+		border-radius: 5px 0 5px 5px;
+		color: rgb(0, 0, 0);
+		background-color: #c5c9cd;
+	}
+	.chat-box .chat-room .bubble {
+		padding: 10px;
+		font-size: 14px;
+		margin-top: 15px;
+		display: inline-block;		
+	}
+	.chat-box .type-area {
+		display: flex;
+		/* width: 350px; */
+		height: 65px;
+		background-color: #fff;
+		border-radius: 0 0 20px 20px;
+	}
+	.chat-box .type-area.d-none + .header{
+		border-radius : 20px;
+	}
+	.chat-box .type-area .input-wrapper {
+		overflow: hidden;
+		border-radius: 0 0 0 20px;
+		width: 75%;
+	}
+	.chat-box .type-area .input-wrapper input {
+		outline: none;
+		border: none;
+		padding-left: 20px;
+		height: 100%;
+		font-size: 14px;
+	}
+	.chat-box .type-area .button-send {
+		background-color: #98b1bd;
+		width: auto;
+		padding-right: 1.5rem;
+		padding-left: 1.5rem;
+		color: #ffffff;
+		font-weight: bold;
+		border-radius: 0 0 20px 0;
+		transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+		cursor: pointer;
+	}
+	.chat-box .type-area .button-send:hover {
+		background-color: #98b1bdcc;
+		color: #fff;
+	}
+		/* Modal */
+	.modal{
+		position: absolute;
+		top:50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		height: 220px;
+		width: 350px;
+		background-color: white;
+		border-radius: 0.3rem;
+	}
+	.modal-content{
+		display: flex;
+		flex-direction : column;
+		justify-content: space-between;
+		height: inherit;
+	}
+
+	.modal-header{
+		display: flex;
+		justify-content: space-between;
+		background-color: #46778f22;
+		padding-left: 1rem;
+	}
+	.modal-title{
+		font-size: 1.2rem;
+	}
+	.modal-body{
+		padding: 1rem;
+	}
+	.modal-footer{
+		display: flex;
+		justify-content: end;
+		padding-bottom: 0.5rem;
+		padding-right: 0.5rem;
+	}
+	.btn-close img{
+		height: 20px;
+		width: 20px;
+	}
+	.btn-close, .btn-delete ,.btn-edit{
+		cursor: pointer;
+		background-color: #98b1bd;
+		color: #ffffff;
+		transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+		padding: 0.8rem 1.5rem;
+		border-radius: 0.3rem;
+	}
+	.btn-close{
+		border-radius: 0 0.3rem 0 0;
+	}
+	.btn-edit{
+		margin-right: 0.5rem;
+	}
+	.btn-close:hover, .btn-delete:hover,.btn-edit:hover  {
+		background-color: #98b1bdcc;
+		color: #fff;
+	}
+
+
+ 				 /* Utils */
+	.d-none {
+		display: none !important;
+	}

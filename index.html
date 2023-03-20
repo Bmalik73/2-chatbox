@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js"></script>
+    <title>ChatBox</title>
+</head>
+<body>
+<h1>Mini Chat</h1>
+    <!-- chatBox 1 -->
+    <main>
+
+      <div class="chat-box">
+        <div class="header">
+            <div class="avatar-wrapper avatar-big">
+              <img src="./assets/images/avatar1.jpg" alt="avatar" />
+            </div>
+          <span class="name">DIAZ</span>
+          <span class="options">
+              <i class="fas fa-ellipsis-h"></i>
+          </span>
+        </div>
+
+        <div class="chat-room">
+          <div class="message message-right " >
+            <div class="avatar-wrapper avatar-small">
+              <img src="./assets/images/avatar1.jpg" alt="avatar" />
+            </div>
+            <div class="bubble">
+              Hello ça va ?
+            </div>
+          </div>
+
+          <div class="message message-left">
+              <div class="avatar-wrapper avatar-small">
+                <img src="./assets/images/avatar2.jpg" alt="avatar" />
+              </div>
+            <div class="bubble">
+              Bien et toi ?
+            </div>
+          </div>
+        </div>
+
+        <div class="type-area">
+          <div class="input-wrapper">
+            <input type="text" id="inputMessage1" placeholder="Saisissez le message ici..." />
+          </div>
+          <button class="button-send">Envoyer</button>
+        </div>    
+      </div>
+      
+      
+      <!-- chatBox 2 -->
+      <div class="chat-box">
+        <div class="header ">
+            <div class="avatar-wrapper  avatar-big ">
+              <img src="./assets/images/avatar2.jpg" alt="avatar" />
+            </div>
+          <span class="name">RON</span>
+          <span class="options2">
+              <i class="fas fa-ellipsis-h"></i>
+          </span>
+        </div>
+
+        <div class="chat-room chat-room2">
+          <div class="message  message-right">
+            <div class="avatar-wrapper  avatar-small ">
+              <img src="./assets/images/avatar2.jpg" alt="avatar" />
+            </div>
+            <div class="bubble">
+              Hello ça va ?
+            </div>
+          </div>
+
+          <div class="message message-left">
+            <div class="avatar-wrapper  avatar-small ">
+              <img src="./assets/images/avatar1.jpg" alt="avatar" />
+            </div>
+            <div class="bubble">
+              Bien et toi ?
+            </div>
+          </div>
+        </div>
+
+        <div class="type-area">
+          <div class="input-wrapper ">
+            <input type="text" id="inputMessage2" placeholder="Saisissez le message ici..." />
+          </div>
+          <button class="button-send">Envoyer</button>
+        </div>
+
+      </div>
+      
+      
+      <div class="modal d-none" >
+        <div class="modal-content">
+          <div class="modal-header">
+            <p class="modal-title">Modification message</p>
+            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+              <img src="./assets/images/close.png" alt="" srcset="">
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <div class="modal-body-content">
+              <p>Que souhaitez vous faire ?</p>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn-edit" data-dismiss="modal" aria-label="edit">
+              Editer
+            </button>
+            <button type="button" class="btn-delete" data-dismiss="modal" aria-label="delete">
+              Supprimer
+            </button>
+          </div>
+          
+        </div>
+      </div>
+    </main>
+      
+    </body>
+    </html>
